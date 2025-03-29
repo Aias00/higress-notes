@@ -5,3 +5,4 @@
 - [非 K8s 部署下对接 Skywalking](./docs/non-k8s-skywalking.md)
 - [如何正确配置 Wasm 插件访问外部服务](./docs/servicename-config.md)
 - [如何直接修改非 K8s 安装的 Higress 的配置数据](./docs/standalone-crs.md)
+- [如何查看 Higress 的运行日志](./docs/log-viewing.md)
