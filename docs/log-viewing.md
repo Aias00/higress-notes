@@ -28,12 +28,12 @@ kubectl logs -n higress-system higress-controller-5c768d64d9-m5gtp -c discovery
 
 ## all-in-one 镜像部署
 
-all-in-one 模式下，Higress 所有的日志文件均保存在容器内的 `/var/logs/higress` 目录下。使用 `docker exec` 命令进入到容器内直接查看文件内容即可。 
+all-in-one 模式下，Higress 所有的日志文件均保存在容器内的 `/var/log/higress` 目录下。使用 `docker exec` 命令进入到容器内直接查看文件内容即可。 
 
 ```bash
 docker exec -it higress-ai-gateway bash
 
-cd /var/logs/higress
+cd /var/log/higress
 ls -l
 cat gateway.log
 ```
