@@ -2,6 +2,9 @@
 
 PLUGIN_NAME=${PLUGIN_NAME:-ai-proxy}
 IMAGE_URL="higress-registry.cn-hangzhou.cr.aliyuncs.com/plugins/$PLUGIN_NAME:1.0.0"
+if [ "$PLUGIN_NAME" == "mcp-server" ]; then
+  IMAGE_URL="higress-registry.cn-hangzhou.cr.aliyuncs.com/mcp-server/all-in-one:1.0.0"
+fi
 
 set -e
 
