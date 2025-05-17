@@ -101,9 +101,9 @@ docker run --rm --name redis -p 6379:6379 higress-registry.cn-hangzhou.cr.aliyun
 3. 用 curl 命令验证获取工具列表
     ```bash
     # sessionId 需要使用浏览器中返回的值
-    curl --location 'http://localhost:8888/mcp/sample?sessionId=b9048bb9-9bed-400c-86a1-516f9f69700c' \
-    --header 'Content-Type: application/json' \
-    --data '{
+    curl http://localhost:8888/mcp/sample?sessionId=b9048bb9-9bed-400c-86a1-516f9f69700c \
+    -H 'Content-Type: application/json' \
+    -d '{
         "jsonrpc": "2.0",
         "id": 1,
         "method": "tools/list"
@@ -114,9 +114,9 @@ docker run --rm --name redis -p 6379:6379 higress-registry.cn-hangzhou.cr.aliyun
     ![request-tools-list-2](../images/mcp-with-nacos3/request-tools-list-2.png)
 5. 用 curl 命令验证工具调用
     ```bash
-    curl --location 'http://localhost:8888/mcp/sample?sessionId=b9048bb9-9bed-400c-86a1-516f9f69700c' \
-    --header 'Content-Type: application/json' \
-    --data '{
+    curl http://localhost:8888/mcp/sample?sessionId=b9048bb9-9bed-400c-86a1-516f9f69700c \
+    -H 'Content-Type: application/json' \
+    -d '{
         "method": "tools/call",
         "params": {
             "name": "add",
