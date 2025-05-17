@@ -134,7 +134,7 @@ docker run --rm --name redis -p 6379:6379 higress-registry.cn-hangzhou.cr.aliyun
 
 ### 工具验证
 
-在完成简单验证之后，大家就可以把这个 MCP Server 配置到支持 MCP Client 的工具（如 Deep Chat、Cherry Studio 等）中进行验证了。工具的 URL 为 `http://localhost:8888/mcp/sample/sse`。
+在完成简单验证之后，大家就可以把这个 MCP Server 配置到支持 MCP Client 的工具（如 DeepChat、Cherry Studio 等）中进行验证了。工具的 URL 为 `http://localhost:8888/mcp/sample/sse`。
 
 ## FAQ
 
