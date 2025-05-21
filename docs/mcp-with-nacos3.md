@@ -1,8 +1,8 @@
-# 如何让 Higress 对接 Nacos 3 MCP Server 管理功能
+# 如何让 Higress 对接 Nacos 3 MCP Server 管理功能（HTTP 服务版）
 
 ## 概述
 
-本文将介绍在 Nacos 3 上配置 MCP Server，并将其通过 Higress 暴露给 MCP Client 访问的完成过程。整个流程将基于一个测试用的简单后端服务实现进行。所有的配置内容也均以此服务所提供的功能为模版编写。建议大家先严格按照本文的步骤配置完成后再尝试自行调整配置对接其他服务。
+本文将介绍在 Nacos 3 上配置 MCP Server，将一个 HTTP Web Service 通过 Higress 暴露给 MCP Client 访问的完整过程。整个流程将基于一个测试用的简单后端服务实现进行。所有的配置内容也均以此服务所提供的功能为模版编写。建议大家先严格按照本文的步骤配置完成后再尝试自行调整配置对接其他服务。
 
 ## 环境准备
 
@@ -25,7 +25,7 @@ docker run -d --rm --name higress-ai -v ${PWD}:/data \
 
 ### 2. 部署 Nacos
 
-参考 Nacos 官网（[[https://nacos.io)](https://nacos.io/)）部署 Nacos，版本不低于 3.0.0。推荐下载压缩包在本地用 standalone 单机模式启动的部署方式。此处不展开介绍。
+参考 Nacos 官网（[https://nacos.io)](https://nacos.io/)）部署 Nacos，版本不低于 4.0.0。推荐下载压缩包在本地用 standalone 单机模式启动的部署方式。此处不展开介绍。
 
 ### 3. 部署 Redis
 
@@ -51,7 +51,7 @@ docker run --rm --name redis -p 6379:6379 higress-registry.cn-hangzhou.cr.aliyun
 
 ### Nacos 配置
 
-1. 在浏览器中打开 Nacos 3 控制台（[http://localhost:8080/](http://localhost:8080/)）
+1. 在浏览器中打开 Higress Console（[http://localhost:8001/](http://localhost:8001/)）
 2. 首次运行时，默认会要求配置用户名密码。请务必牢记
 3. 点击左侧的“MCP管理”→“MCP列表”
 4. 点击“创建 MCP Server”按钮
