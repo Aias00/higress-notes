@@ -1,4 +1,6 @@
-# 如何让 Higress 对接现存的 MCP Server（SSE 版）
+# 【预览】如何让 Higress 对接现存的 MCP Server（SSE 版）
+
+> 重要，以下文档所基于的 Higress 功能截止发稿时并未正式发布。本文仅供预览。
 
 ## 概述
 
@@ -21,7 +23,7 @@ docker run -d --rm --name higress-ai -v ${PWD}:/data \
         higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/all-in-one:latest
 ```
 
-安装完成后，在浏览器中访问 Higress Console，确认底部显示的版本号不低于 2.1.3。
+安装完成后，在浏览器中访问 Higress Console，确认底部显示的版本号不低于 2.1.4。
 
 ### 2. 启动后端服务
 

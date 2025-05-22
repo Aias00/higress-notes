@@ -8,4 +8,4 @@
 - [如何查看 Higress 的运行日志](./docs/log-viewing.md)
 - 如何让 MCP Server 接入 Higress 网关
     - [对接 Nacos 3 的 MCP Server 注册中心](./docs/mcp-with-nacos3.md)
-    - [对接现存的 SSE MCP Server](./docs/mcp-with-sse.md)
+    - [【预览】对接现存的 SSE MCP Server](./docs/mcp-with-sse.md)
