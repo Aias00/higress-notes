@@ -58,6 +58,7 @@ docker run --rm --name redis -p 6379:6379 higress-registry.cn-hangzhou.cr.aliyun
 5. 参考下图填写 MCP Server 信息，并发布<br/>
     ![new-mcp-server](../images/mcp-with-nacos3/new-mcp-server.png)
 6. 点击刚刚创建的 MCP Server 右侧的“编辑”链接
+7. 将“服务版本”修改改为 1.0.1
 7. 点击下方“Tools”右侧的“添加”按钮
 8. 参考下图配置 Tool 的元信息<br/>
     ![tool-meta](../images/mcp-with-nacos3/tool-meta.png)
@@ -67,7 +68,7 @@ docker run --rm --name redis -p 6379:6379 higress-registry.cn-hangzhou.cr.aliyun
     - Key: `json-go-template`
     - Value: `{"requestTemplate":{"method":"GET","url":"/add","argsToUrlParam":true},"responseTemplate":{"body":"Result: {{ .result }}"}}`
 11. 点击“确定”保存 Tool 信息
-12. 点击“更新”保存 MCP Server 信息<br/>
+12. 点击“发布为最新版本” 使 Tool 配置生效<br/>
     ![mcp-server-list](../images/mcp-with-nacos3/mcp-server-list.png)
 
 ### Higress 配置
