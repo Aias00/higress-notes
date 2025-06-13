@@ -21,11 +21,11 @@ docker run -d --rm --name higress-ai -v ${PWD}:/data \
         higress-registry.cn-hangzhou.cr.aliyuncs.com/higress/all-in-one:latest
 ```
 
-安装完成后，在浏览器中访问 Higress Console，确认底部显示的版本号不低于 2.1.3。
+安装完成后，在浏览器中访问 Higress Console，确认底部显示的版本号不低于 2.1.4。
 
 ### 2. 部署 Nacos
 
-参考 Nacos 官网（[https://nacos.io)](https://nacos.io/)）部署 Nacos，版本不低于 4.0.0。推荐下载压缩包在本地用 standalone 单机模式启动的部署方式。此处不展开介绍。
+参考 Nacos 官网（[https://nacos.io)](https://nacos.io/)）部署 Nacos，版本不低于 3.0.1。推荐下载压缩包在本地用 standalone 单机模式启动的部署方式。此处不展开介绍。
 
 ### 3. 部署 Redis
 

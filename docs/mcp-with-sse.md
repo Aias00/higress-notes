@@ -1,4 +1,4 @@
-# 【预览】如何让 Higress 对接现存的 MCP Server（SSE 版）
+# 如何让 Higress 对接现存的 MCP Server（SSE 版）
 
 > 重要，以下文档所基于的 Higress 功能截止发稿时并未正式发布。本文仅供预览。
 
