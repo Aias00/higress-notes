@@ -63,10 +63,8 @@ docker run --rm --name redis -p 6379:6379 higress-registry.cn-hangzhou.cr.aliyun
 8. 参考下图配置 Tool 的元信息<br/>
     ![tool-meta](../images/mcp-with-nacos3/tool-meta.png)
     注意：添加参数时需要先选中“参数列表”，然后才能点击它上方的“添加参数”按钮
-9. 点击下方“调用模板”右侧的“添加”按钮
-10. 填入以下信息
-    - Key: `json-go-template`
-    - Value: `{"requestTemplate":{"method":"GET","url":"/add","argsToUrlParam":true},"responseTemplate":{"body":"Result: {{ .result }}"}}`
+10. 在“协议转化配置”中填入以下信息
+    `{"requestTemplate":{"method":"GET","url":"/add","argsToUrlParam":true},"responseTemplate":{"body":"Result: {{ .result }}"}}`
 11. 点击“确定”保存 Tool 信息
 12. 点击“发布为最新版本” 使 Tool 配置生效<br/>
     ![mcp-server-list](../images/mcp-with-nacos3/mcp-server-list.png)
