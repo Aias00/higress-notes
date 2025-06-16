@@ -73,7 +73,7 @@ docker run -d --rm --name higress-ai -v ${PWD}:/data \
           match_rule_path: /mcp/sample
           match_rule_type: prefix
           upstream_type: sse
-          path_rewrite_enabled: true
+          enable_path_rewrite: true
           path_rewrite_prefix: /mcp
         ```
     4.  修改后的配置如下图所示<br/>
