@@ -59,6 +59,11 @@ docker run -d --rm --name higress-ai -v ${PWD}:/data \
 3. 参考下图填写路由信息<br/>
     ![new-route](../images/mcp-with-sse/new-route.png)
 4. 点击“确定”按钮
+5. 点击新创建的路由右侧的“策略”链接
+6. 点击“重写”策略下方的配置按钮
+7. 按下图填入配置<br/>
+    ![route-rewrite](../images/mcp-with-sse/route-rewrite.png)
+8. 点击“保存”按钮
 
 ### MCP Server Filter 配置
 
