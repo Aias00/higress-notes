@@ -51,8 +51,7 @@ docker run --rm --name redis -p 6379:6379 higress-registry.cn-hangzhou.cr.aliyun
 
 ### Nacos 配置
 
-1. 在浏览器中打开 Higress Console（[http://localhost:8001/](http://localhost:8001/)）
-2. 首次运行时，默认会要求配置用户名密码。请务必牢记
+1. 在浏览器中打开 Nacos Console（[http://nacos-server-ip:8080/](http://nacos-server-ip:8080/)）
 3. 点击左侧的“MCP管理”→“MCP列表”
 4. 点击“创建 MCP Server”按钮
 5. 参考下图填写 MCP Server 信息，并发布<br/>
