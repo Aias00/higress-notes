@@ -146,7 +146,7 @@ docker stop higress-ai
 
 如果重启后还是没有出现的话，可以查看容器内的 `/var/log/higress/controller.log` 日志文件是否有错误信息。
 
-### 2. 在请求 `http://localhost:8888/mcp/sample/sse` 是页面卡住
+### 2. 在请求 `http://localhost:8888/mcp/sample/sse` 时页面卡住
 
 检查网关能否正常访问 Redis。可以进入容器内验证 6379 端口的连通性。
 
@@ -158,3 +158,30 @@ nc RedisIP 6379
 # 输入 QUIT 并回车后，服务端会返回 +OK。
 # 再次回车，连接会自动断开并回到容器 shell。
 ```
+
+### 3. 在请求 `http://localhost:8888/mcp/sample/sse` 时返回 405
+
+检查上方“Higress 配置”一节中提到的“系统设置”部分是否正确配置了。
+
+如果配置无误，可以参考官网关于“查看运行时配置”的文档获取 gateway 的运行时配置，在其中搜索 `mcp-session`，并检查相应 filter 中 gateway 获取到的配置与前面在 console 上写入的配置是否一致。如果二者不一致，则需要进一步检查 controller 和 pilot 的运行时配置，确认配置不一致的源头，进而检查相应组件的日志，判断问题发生的原因。
+
+### 4. 在请求 `http://localhost:8888/mcp/sample/sse` 时返回 404
+
+查看访问日志（access log），在其中找到对应 404 请求的记录，根据 `response_code_details` 中记录的原因进行分析。
+
+#### route_not_found
+
+查看 controller 的日志，检查是否有与 Nacos 通信相关的错误。
+
+#### via_upstream
+
+查看访问日志中的 `route_name` 和 `upstream_host`，确认是否命中了期望的路由和后端服务器。
+
+如果命中正确，那请检查后端服务器是否可以正确处理相应的请求，或者是否在 Nacos 中为其添加的 Tools 配置存在错误。
+
+如果命中错误，那么请检查请求的 URL 是否正确，是否与 Nacos 中配置的 MCP Server 相匹配，以及 Nacos 中与 MCP Server 关联的服务信息是否正确。
+
+## 参考文档
+
+- 如何查看日志：https://higress.cn/docs/latest/ops/how-tos/view-logs/
+- 如何查看运行时配置：https://higress.cn/docs/latest/ops/how-tos/view-configs/
