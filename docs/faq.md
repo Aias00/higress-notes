@@ -96,7 +96,7 @@ Higress 上所有的插件配置是打包下发的，也就是意味着如果你
 Higress 默认从公网镜像仓库来下载插件镜像。如果你的服务器无法访问外网，那么所有的插件都将不能正常工作。
 
 解决办法：
-1. 在内网部署社区开源的 plugin-server，并根据其文档修改内置插件的镜像地址。
+1. 在内网部署社区开源的 [plugin-server](https://github.com/higress-group/plugin-server/)，并根据其文档修改内置插件的镜像地址。
 2. 如果你已经配置了一些插件（含 AI 路由、MCP Server），这些插件配置中已经记录了默认的外网镜像地址。你需要将已有 `WasmPlugins` 资源中的 `url` 字段改为对应插件在 plugin-server 上的 URL 才行。如果你使用的是容器方式来部署的 Higress，请查看此文档了解修改各种资源配置的方法：[链接](./standalone-crs.md)
 
 ### 插件请求 API 或 Redis 要怎么配，为什么会遇到 `bad argument` 错误？
