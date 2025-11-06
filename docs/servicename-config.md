@@ -49,4 +49,8 @@ Higress 的数据面基于 Envoy 搭建。Wasm 插件也运行在 Envoy 当中�
 
 本方法供使用 helm 安装的 Higress 实例选择使用。将 `global.onlyPushRouteCluster` 参数设置为 `false` 更新安装配置即可。
 
+```shell
+  helm upgrade higress -n higress-system higress.io/higress --reuse-values --set global.onlyPushRouteCluster=true
+```
+
 相关文档：https://higress.cn/docs/latest/ops/deploy-by-helm/#%E5%B8%B8%E7%94%A8%E5%AE%89%E8%A3%85%E5%8F%82%E6%95%B0
