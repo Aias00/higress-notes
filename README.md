@@ -10,3 +10,4 @@
 - 如何让 MCP Server 接入 Higress 网关
     - [对接 Nacos 3 的 MCP Server 注册中心](./docs/mcp-with-nacos3.md)
     - [对接现存的 SSE MCP Server](./docs/mcp-with-sse.md)
+- Wasm 插件对文件系统相关的操作支持的不是很友好，应该是 wasm 本身的设计限制。尝试对接一个 go 语言模型调用的框架，失败了，失败原因是类似的问题，根本原因没有查明
